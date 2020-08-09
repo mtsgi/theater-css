@@ -1,0 +1,17 @@
+{
+  "name": "theater-css",
+  "version": "0.1.0",
+  "description": "theater.css - from social.css",
+  "main": "css/theater.css",
+  "repository": "https://github.com/mtsgi/theater-css",
+  "author": "mtsgi <oq@live.jp>",
+  "devDependencies": {
+    "bulma": "^0.9.0",
+    "node-sass": "^4.14.1"
+  },
+  "scripts": {
+    "css-build": "node-sass --omit-source-map-url sass/theater.scss css/theater.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
+  }
+}
