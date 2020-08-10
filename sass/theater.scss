@@ -46,4 +46,47 @@
     filter: brightness(90%);
     border: 1px solid #202020;
   }
+  &[disabled],
+  &.is-primary[disabled],
+  &.is-link[disabled],
+  &.is-info[disabled],
+  &.is-success[disabled],
+  &.is-warning[disabled] {
+    opacity: 1.0;
+    filter: brightness(75%);
+    border: 1px solid #202020;
+  }
+}
+
+.input {
+  box-shadow: none;
+  background: #f0f0f0;
+}
+
+$progress-value-background-color: orange;
+
+.progress {
+  border-radius: 0;
+}
+
+.modal {
+  &-card {
+    &-head {
+      border-radius: 12px 12px 0 0;
+      padding: 16px;
+      background: rgb(198,180,111);
+      background: linear-gradient(0deg, rgba(198,180,111,1) 0%, rgba(250,232,142,1) 100%);
+      font-weight: bold;
+    }
+    &-body:first-child {
+      border-radius: 12px 12px 0 0;
+    }
+    &-foot {
+      border-radius: 0 0 12px 12px;
+      background: #dddddd;
+      border-top: none;
+      padding: 16px;
+      justify-content: center;
+    }
+  }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
   <meta charset="utf-8">
@@ -19,7 +19,7 @@
         <h2 class="subtitle">
           from Social.css | 
           <a href="https://github.com/mtsgi/theater-css" target="_blank" rel="noopener noreferrer">
-            View on GitHub
+            GitHub で見る
           </a>
         </h2>
       </div>
@@ -28,8 +28,7 @@
 
   <main>
     <p class="subtitle">
-      Theater.css Extends Bulma : Modern CSS framework based on <a
-        href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a>
+      Theater.css は Bulma を拡張したCSSフレームワークです。
     </p>
 
     <div class="field">
@@ -38,40 +37,37 @@
       </div>
     </div>
 
-    <div class="field">
-      <p class="control">
-        <span class="select">
-          <select>
-            <option>Select dropdown</option>
-          </select>
-        </span>
-      </p>
-    </div>
-
-    <div class="buttons">
+    <div class="buttons mt-5">
       <a class="button">Default</a>
       <a class="button is-primary">Primary</a>
       <a class="button is-link">Link</a>
       <a class="button is-info">Info</a>
-      <a class="button is-success">Success</a>
-      <a class="button is-warning">Warning</a>
-      <a class="button is-danger">Danger</a>
     </div>
+
     <div class="buttons">
       <a class="button is-rounded">Default</a>
       <a class="button is-rounded is-primary">Primary</a>
       <a class="button is-rounded is-link">Link</a>
       <a class="button is-rounded is-info">Info</a>
-      <a class="button is-rounded is-success">Success</a>
-      <a class="button is-rounded is-warning">Warning</a>
-      <a class="button is-rounded is-danger">Danger</a>
     </div>
+
+    <div class="buttons">
+      <a class="button is-rounded" disabled>Default</a>
+      <a class="button is-rounded is-primary" disabled>Primary</a>
+      <a class="button is-rounded is-link" disabled>Link</a>
+      <a class="button is-rounded is-info" disabled>Info</a>
+    </div>
+
+    <progress class="progress is-small" value="15" max="100">15%</progress>
+    <progress class="progress" value="30" max="100">30%</progress>
+    <progress class="progress is-medium" value="45" max="100">45%</progress>
+    <progress class="progress is-large" value="60" max="100">60%</progress>
 
     <button class="button is-primary is-large is-rounded" kit-e="toggleModal">Open modal</button>
 
     <div class="modal" kit:if="modal">
       <div class="modal-background"></div>
-      <div class="modal-card">
+      <div class="modal-card mt-6">
         <header class="modal-card-head">
           <p class="modal-card-title">タイトル</p>
           <button class="delete" aria-label="close" kit-e="toggleModal"></button>

@@ -7513,3 +7513,31 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   .button:hover, .button.is-primary:hover, .button.is-link:hover, .button.is-info:hover, .button.is-success:hover, .button.is-warning:hover {
     filter: brightness(90%);
     border: 1px solid #202020; }
+  .button[disabled], .button.is-primary[disabled], .button.is-link[disabled], .button.is-info[disabled], .button.is-success[disabled], .button.is-warning[disabled] {
+    opacity: 1.0;
+    filter: brightness(75%);
+    border: 1px solid #202020; }
+
+.input {
+  box-shadow: none;
+  background: #f0f0f0; }
+
+.progress {
+  border-radius: 0; }
+
+.modal-card-head {
+  border-radius: 12px 12px 0 0;
+  padding: 16px;
+  background: #c6b46f;
+  background: linear-gradient(0deg, #c6b46f 0%, #fae88e 100%);
+  font-weight: bold; }
+
+.modal-card-body:first-child {
+  border-radius: 12px 12px 0 0; }
+
+.modal-card-foot {
+  border-radius: 0 0 12px 12px;
+  background: #dddddd;
+  border-top: none;
+  padding: 16px;
+  justify-content: center; }
