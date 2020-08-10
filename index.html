@@ -1,40 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My custom Bulma website</title>
-    <link rel="stylesheet" href="css/theater.css">
-  </head>
-  <body>
-     <h1 class="title">
-        Bulma
-      </h1>
 
-      <p class="subtitle">
-        Modern CSS framework based on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Theater.css - from Social.css</title>
+  <link rel="stylesheet" href="css/theater.css">
+</head>
+
+<body>
+  <section class="hero is-primary">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Theater.css
+        </h1>
+        <h2 class="subtitle">
+          from Social.css | 
+          <a href="https://github.com/mtsgi/theater-css" target="_blank" rel="noopener noreferrer">
+            View on GitHub
+          </a>
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <p class="subtitle">
+      Theater.css Extends Bulma : Modern CSS framework based on <a
+        href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a>
+    </p>
+
+    <div class="field">
+      <div class="control">
+        <input class="input" type="text" placeholder="Input">
+      </div>
+    </div>
+
+    <div class="field">
+      <p class="control">
+        <span class="select">
+          <select>
+            <option>Select dropdown</option>
+          </select>
+        </span>
       </p>
+    </div>
 
-      <div class="field">
-        <div class="control">
-          <input class="input" type="text" placeholder="Input">
-        </div>
-      </div>
+    <div class="buttons">
+      <a class="button">Default</a>
+      <a class="button is-primary">Primary</a>
+      <a class="button is-link">Link</a>
+      <a class="button is-info">Info</a>
+      <a class="button is-success">Success</a>
+      <a class="button is-warning">Warning</a>
+      <a class="button is-danger">Danger</a>
+    </div>
+    <div class="buttons">
+      <a class="button is-rounded">Default</a>
+      <a class="button is-rounded is-primary">Primary</a>
+      <a class="button is-rounded is-link">Link</a>
+      <a class="button is-rounded is-info">Info</a>
+      <a class="button is-rounded is-success">Success</a>
+      <a class="button is-rounded is-warning">Warning</a>
+      <a class="button is-rounded is-danger">Danger</a>
+    </div>
 
-      <div class="field">
-        <p class="control">
-          <span class="select">
-            <select>
-              <option>Select dropdown</option>
-            </select>
-          </span>
-        </p>
-      </div>
+    <button class="button is-primary is-large is-rounded" kit-e="toggleModal">Open modal</button>
 
-      <div class="buttons">
-        <a class="button is-primary">Primary</a>
-        <a class="button is-link">Link</a>
+    <div class="modal" kit:if="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">タイトル</p>
+          <button class="delete" aria-label="close" kit-e="toggleModal"></button>
+        </header>
+        <section class="modal-card-body">
+          モーダルの内容です。
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-rounded">Cancel</button>
+          <button class="button is-rounded is-primary">OK</button>
+        </footer>
       </div>
-  </body>
+    </div>
+  </main>
+
+  <script type="module">
+    import Kaf from 'https://mtsgi.github.io/kafjs/kaf.js';
+
+    const kaf = new Kaf({
+      elem: 'main',
+      locale: 'ja',
+      data: {
+        modal: false
+      },
+      events: {
+        toggleModal() { this.modal = !this.modal }
+      },
+      styles: {
+        margin: "16px"
+      }
+    });
+  </script>
+</body>
+
 </html>

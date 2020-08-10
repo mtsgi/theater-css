@@ -7479,3 +7479,37 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .footer {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
+
+.button {
+  border: 1px solid #202020;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(90deg, white 0%, #f6f6f6 100%);
+  padding: 0 1.5em;
+  line-height: 2;
+  height: auto; }
+  .button.is-primary {
+    border: 1px solid #202020;
+    background: #ff7899;
+    background: linear-gradient(90deg, #ff7899 0%, #ff4040 100%); }
+  .button.is-link {
+    border: 1px solid #202020;
+    background: #bca4ce;
+    background: linear-gradient(90deg, #bca4ce 0%, #906dab 100%); }
+  .button.is-info {
+    border: 1px solid #202020;
+    background: #00c0e0;
+    background: linear-gradient(90deg, #00c0e0 0%, #0090d0 100%); }
+  .button.is-success {
+    border: 1px solid #202020;
+    background: #68c888;
+    background: linear-gradient(90deg, #68c888 0%, #2ca66d 100%); }
+  .button.is-warning {
+    color: #ffffff;
+    border: 1px solid #202020;
+    background: #fb6064;
+    background: linear-gradient(90deg, #fb6064 0%, #d83633 100%); }
+    .button.is-warning:hover {
+      color: #ffffff; }
+  .button:hover, .button.is-primary:hover, .button.is-link:hover, .button.is-info:hover, .button.is-success:hover, .button.is-warning:hover {
+    filter: brightness(90%);
+    border: 1px solid #202020; }
