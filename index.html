@@ -31,6 +31,8 @@
       Theater.css は Bulma を拡張したCSSフレームワークです。
     </p>
 
+    <h2 class="is-size-3 mb-3">Forms</h2>
+
     <div class="field">
       <div class="control">
         <input class="input" type="text" placeholder="Input">
@@ -58,10 +60,26 @@
       <a class="button is-rounded is-info" disabled>Info</a>
     </div>
 
-    <progress class="progress is-small" value="15" max="100">15%</progress>
-    <progress class="progress" value="30" max="100">30%</progress>
-    <progress class="progress is-medium" value="45" max="100">45%</progress>
-    <progress class="progress is-large" value="60" max="100">60%</progress>
+    <div class="field">
+      <input class="is-checkradio" id="cb" type="checkbox" name="cb" checked="checked">
+      <label for="cb">Checkbox</label>
+    </div>
+
+    <div class="field">
+      <input class="is-checkradio is-medium" id="cb_medium" type="checkbox" name="cb_medium" checked="checked">
+      <label for="cb_medium">Checkbox - medium</label>
+    </div>
+
+    <div class="field">
+      <input class="is-checkradio" id="radio1" type="radio" name="radio" checked="checked">
+      <label for="radio1">Option 1</label>
+      <input class="is-checkradio" id="radio2" type="radio" name="radio">
+      <label for="radio2">Option 2</label>
+    </div>
+
+    <h2 class="is-size-3 mb-3">Modal</h2>
+
+    <p class="mb-5">クリックでモーダルを開きます</p>
 
     <button class="button is-primary is-large is-rounded" kit-e="toggleModal">Open modal</button>
 
@@ -74,14 +92,30 @@
         </header>
         <section class="modal-card-body">
           モーダルの内容です。
+          <div class="field mt-3">
+            <input class="is-checkradio" id="cb_modal" type="checkbox" name="cb_modal">
+            <label for="cb_modal">チェックする</label>
+          </div>
         </section>
         <footer class="modal-card-foot">
-          <button class="button is-rounded">Cancel</button>
-          <button class="button is-rounded is-primary">OK</button>
+          <button kit-e="toggleModal" class="button is-rounded">Cancel</button>
+          <button kit-e="toggleModal" class="button is-rounded is-primary">OK</button>
         </footer>
       </div>
     </div>
   </main>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Theater.css</strong> by <a href="https://mtsgi.github.io">mtsgi</a>. The source code is licensed
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>
+      </p>
+      <p>
+        This website is using <a href="https://mtsgi.github.io/kafjs">kaf.js</a>
+      </p>
+    </div>
+  </footer>
 
   <script type="module">
     import Kaf from 'https://mtsgi.github.io/kafjs/kaf.js';
