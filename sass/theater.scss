@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import "../node_modules/bulma/bulma.sass";
+@import "../node_modules/bulma-checkradio/dist/css/bulma-checkradio.sass";
 
 .button {
   border: 1px solid #202020;
@@ -87,6 +88,108 @@ $progress-value-background-color: orange;
       border-top: none;
       padding: 16px;
       justify-content: center;
+    }
+  }
+}
+
+.is-checkradio[type="checkbox"] {
+  &:hover:not([disabled]) + label::before {
+    border: 0.1rem solid #000000 !important;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+    filter: brightness(85%);
+    background: #ffffff;
+  }
+  &:checked {
+    + label::before {
+      border: 0.1rem solid #000000;
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+    }
+    + label::after {
+      width: 0.5rem;
+      height: 0.9rem;
+      top: 0.2rem;
+      left: 0.45rem;
+      border-bottom-width: 4px;
+      border-right-width: 2px;
+      border-color: #f54f4a;
+    }
+    &.is-small + label::after {
+      top: 0rem;
+      left: 0.3rem;
+    }
+    &.is-medium + label::after {
+      top: 0.4rem;
+      left: 0.6rem;
+    }
+    &.is-large + label::after {
+      top: 0.6rem;
+      left: 0.8rem;
+    }
+  }
+  &:not(:checked) {
+    + label::before {
+      border: 0.1rem solid #000;
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+    }
+    + label::after {
+      display: inline-block !important;
+      width: 0.5rem;
+      height: 0.9rem;
+      top: 0.2rem;
+      left: 0.45rem;
+      border-bottom-width: 4px;
+      border-right-width: 2px;
+      border-color: #e4e4e4;
+    }
+    &.is-small + label::after {
+      top: 0rem;
+      left: 0.3rem;
+    }
+    &.is-medium + label::after {
+      top: 0.4rem;
+      left: 0.6rem;
+    }
+    &.is-large + label::after {
+      top: 0.6rem;
+      left: 0.8rem;
+    }
+  }
+}
+
+.is-checkradio[type="radio"] {
+  &[disabled]:hover + label::before,
+  &:hover:not([disabled]) + label::before {
+    filter: brightness(75%);
+    border-color: #ffffff !important;
+  }
+  &:checked {
+    + label::before {
+      border: 0.2rem solid #ffffff;
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      background: #000000;
+      border-radius: 0;
+      transform: rotate(45deg) scale(0.75);
+    }
+    + label::after {
+      background: rgb(198,180,111);
+      background: linear-gradient(0deg, rgba(198,180,111,1) 0%, rgba(250,232,142,1) 100%);
+      border-radius: 0;
+      transform: rotate(45deg) scale(0.4);
+    }
+  }
+  &:not(:checked) {
+    + label::before {
+      border: 0.2rem solid #fff;
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      background: #000;
+      border-radius: 0;
+      transform: rotate(45deg) scale(0.75);
+    }
+    + label::after {
+      display: inline-block !important;
+      background: #fff;
+      border-radius: 0;
+      transform: rotate(45deg) scale(0.4);
     }
   }
 }
