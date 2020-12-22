@@ -12,17 +12,17 @@
 <body>
   <section class="hero is-primary">
     <div class="hero-body">
-      <div class="container">
-        <h1 class="title">
-          Theater.css
-        </h1>
-        <h2 class="subtitle">
-          from Social.css | 
-          <a href="https://github.com/mtsgi/theater-css" target="_blank" rel="noopener noreferrer">
-            GitHub で見る
-          </a>
-        </h2>
-      </div>
+      <h1 class="title">
+        Theater.css
+        <a href="https://github.com/mtsgi/social-css" target="_blank" rel="noopener noreferrer">
+          from Social.css
+        </a>
+      </h1>
+      <h2 class="subtitle has-text-right">
+        <a href="https://github.com/mtsgi/theater-css" target="_blank" rel="noopener noreferrer">
+          GitHub で見る
+        </a>
+      </h2>
     </div>
   </section>
 
@@ -107,6 +107,7 @@
 
   <footer class="footer">
     <div class="content has-text-centered">
+      <img class="logo" src="./img/logo.png" alt="Theater.css">
       <p>
         <strong>Theater.css</strong> by <a href="https://mtsgi.github.io">mtsgi</a>. The source code is licensed
         <a href="http://opensource.org/licenses/mit-license.php">MIT</a>
@@ -121,7 +122,7 @@
     import Kaf from 'https://mtsgi.github.io/kafjs/kaf.js';
 
     const kaf = new Kaf({
-      elem: 'main',
+      elem: 'body',
       locale: 'ja',
       data: {
         modal: false
@@ -130,7 +131,16 @@
         toggleModal() { this.modal = !this.modal }
       },
       styles: {
-        margin: "16px"
+        "main": {
+          margin: "16px"
+        },
+        ".hero-body": {
+          padding: "16px",
+          "h1 a": {
+            color: "rgba(255, 255, 255, 0.75)",
+            textDecoration: "underline"
+          }
+        }
       }
     });
   </script>

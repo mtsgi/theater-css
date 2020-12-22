@@ -1,8 +1,10 @@
-# Theater.css
+# [Social.css](https://github.com/mtsgi/social-css) / Theater.css
 
-Theater.css は Bulma を拡張したCSSフレームワークです。
+![Theater.css](img/banner.png)
 
-[Social.css](https://github.com/mtsgi/social-css) の派生プロダクトです。
+Sekai.css は Bulma を拡張したCSSフレームワークです。
+
+[Social.css](https://github.com/mtsgi/social-css) ファミリーのプロダクトです。
 
 ## 📦 Usage
 
